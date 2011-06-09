@@ -1,0 +1,30 @@
+DOC: http://wiki.dev.renren.com/wiki/API
+
+管理类接口
+admin.getAllocation
+Out[1]: {u'notifications_per_day': 10, u'requests_per_day': 10}
+
+好友关系类接口
+In [3]: api.test('friends.areFriends', uids1=[47080285, 52818082], uids2=[69645063, 75803913])
+friends.areFriends
+Out[3]:
+[{u'are_friends': 1, u'uid1': 47080285, u'uid2': 69645063},
+ {u'are_friends': 0, u'uid1': 52818082, u'uid2': 75803913}]
+
+In [2]: api.test('friends.get', count=4)
+friends.get
+Out[2]: [47080285, 52818082, 69645063, 75803913]
+
+In [5]: api.test('friends.getFriends', count=1)
+friends.getFriends
+Out[5]:
+[{u'headurl': u'http://hdn.xnimg.cn/photos/hdn421/20110406/2025/h_head_Dhs1_0f4000022ff42f75.jpg',
+  u'id': 47080285,
+  u'name': u'\u8096\u658c',
+  u'tinyurl': u'http://hdn.xnimg.cn/photos/hdn421/20110406/2025/tiny_G1Zq_70494e019117.jpg'}]
+
+In [18]: api.test('users.getLoggedInUser')
+users.getLoggedInUser
+Out[18]: {u'uid': 319621581}
+
+无效的测试用户，测试用户的好友总数必须小于或等于5
