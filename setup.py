@@ -5,7 +5,7 @@
 #  Created     : Thu Jun 09 09:51:28 2011 by Feather.et.ELF
 #  Copyright   : Feather Workshop (c) 2011
 #  Description : Renren API bingding
-#  Time-stamp: <2011-06-09 09:57:17 andelf>
+#  Time-stamp: <2011-06-09 10:35:37 andelf>
 
 
 #from distutils.core import setup
@@ -53,5 +53,9 @@ setup(name = "pyrenren",
           "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries",
           "Topic :: Utilities"
           ],
-      zip_safe = True)
+      zip_safe = True,
+      install_requires = [
+          "httplib2 >= 0.6.0",
+          ],
+      )
 

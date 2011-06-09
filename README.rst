@@ -10,6 +10,14 @@ renren.com API 绑定.... 完成度 50%.
 
 极其简单.
 
+安装方法
+
+::
+
+  $ easy_install httplib2
+  $ cd pyrenren
+  $ python setup.py install
+
 源码级兼容 py2.6 -- py3.2.
 
 附带例子代码是.... 山寨的好友档案.
